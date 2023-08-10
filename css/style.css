@@ -626,6 +626,9 @@ h6.skill_name {
     .project_sec{
         margin-bottom:40px;
     }
+    .tooltip{
+        display: none;
+    }
 }
 @media(max-width:575px){
     .counterbox p {

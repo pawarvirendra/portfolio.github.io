@@ -1,0 +1,649 @@
+/*===========|| Common css start || ==========*/
+:root{
+    --dark_black:#2a2a2a;
+    --black:#1f1f1f;
+    --lightblack:#666;
+    --lighttext:#999999;
+    --white:#fff;
+    --themecolor:#14c5fd;
+    --borderlight : #565656;
+    --box_shadow: transparent;
+
+    --fs_50:50px;
+    --fs_24:24px;
+    --fs_20:20px;
+    --fs_14:14px;
+    --fs_12:12px;
+}
+
+body{
+    background-color: var(--black);
+    color: var(--white);
+}
+.allcontent {
+    max-width: calc(100% - 420px);
+    margin-left: auto;
+}
+.commonTitle {
+    position: sticky;
+    top: 0;
+    background: var(--black);
+    margin-bottom: 40px;
+    padding: 10px 0;
+    z-index: 9;
+}
+.commonTitle h5{
+    font-size: 12px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+    border: 1px solid var(--borderlight);
+    padding: 9px 20px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+}
+.commonPara{
+   color: var(--lighttext);
+   line-height: 30px;
+}
+.commonPara b{
+    color: var(--themecolor);
+}
+.sectgapping{
+    padding-top:80px;
+    padding-bottom:80px;
+}
+.commonHeading {
+    font-size: 48px;
+    line-height: 60px;
+    color: var(--white);
+    font-weight: 300;
+    margin-bottom: 33px;
+    max-width: 650px;
+}
+.highlighText{
+    color:var(--themecolor);
+}
+/*===========|| Common css End || ==========*/
+/*===========|| Profilesidebar css start || ==========*/
+.modechangeBtn {
+    position: absolute;
+    left: -16px;
+    background: var(--black);
+    padding:  8px 4px;
+    animation: rotateicon 1500ms infinite linear backwards;
+    transform-origin: center;
+}
+/* @keyframes rotateicon{
+    0%{
+       transform:rotate(0deg); 
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+.modechangeBtn i {
+    font-size: 22px;
+    cursor: pointer;
+}
+.proSideBar {
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid var(--borderlight);
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px 30px;
+    z-index: 10;
+    max-width: 350px;
+}
+.profileImag img {
+    width: 100%;
+    height: calc(100vh - 420px);
+    border-radius: 20px;
+    object-fit: cover;
+    max-height: 250px;
+    min-height: 150px;
+}
+.profileName h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.profileName .designation{
+    color: var(--lighttext);
+}
+.profileImag {
+    margin-bottom: 20px;
+}
+.emilandPhone a {
+    color: var(--lighttext);
+    text-decoration: none;
+    margin: 3px 0;
+    display: inline-block;
+}
+
+.emilandPhone a i {
+    margin-right: 5px;
+}
+.socialLink ul{
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+}
+.socialLink a {
+    display: inline-block;
+    border: 1px solid var(--borderlight);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: var(--borderlight);
+    transition: .3s;
+}
+.socialLink a:hover{
+    border: 1px solid var(--themecolor);
+    color: var(--themecolor);
+}
+.hiremeBtn a,.two_appositeBtn .downloadBtn{
+    background: var(--themecolor);
+    color: var(--black);
+    display: block;
+    text-align: center;
+    padding: 11px 58px 10px 58px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+    text-transform: uppercase;
+    border: none;
+    transition: .3s;
+    cursor: pointer;
+    border: 2px solid var(--themecolor);
+    text-decoration: none;
+}
+.two_appositeBtn .hiremeBtn:hover{
+    background: var(--themecolor);
+    color: var(--black);
+    border: 2px solid var(--themecolor);
+}
+.two_appositeBtn .downloadBtn{
+    padding: 11px 25px 10px 25px;
+}
+.two_appositeBtn .hiremeBtn{
+    background: transparent;
+    color: var(--themecolor);
+    display: block;
+    text-align: center;
+    padding: 11px 25px 10px 25px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 30px;
+    justify-content: center;
+    text-transform: uppercase;
+    border: none;
+    transition: .3s;
+    cursor: pointer;
+    border: 2px solid var(--themecolor);
+    text-decoration: none;
+}
+.hiremeBtn a:hover,.two_appositeBtn .downloadBtn:hover{
+    background: transparent;
+    border: 2px solid var(--themecolor);
+    color: var(--themecolor);
+}
+/*===========|| Profilesidebar css End || ==========*/
+/*===========|| fixed menu css start || ==========*/
+.menubar {
+    position: fixed;
+    right: 50px;
+    max-width: 60px;
+    top: 90px;
+    transition-duration: 0.3s;
+    z-index: 99;
+    background: var(--black);
+}
+.menubar ul li a {
+    text-decoration: none;
+    color: var(--lighttext);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menubar ul li a span {
+    margin-left: 6px;
+    opacity:0;
+    /* display: none; */
+    transition-duration: 0.3s;
+    display: inline-block;
+    white-space: nowrap;
+}
+.menubar ul {
+    margin-bottom: 0;
+    color: var(--lighttext);
+    border: 1px solid var(--borderlight);
+    padding: 20px 20px;
+    border-radius: 50px;
+    row-gap: 15px;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+.crossicon{
+    display: none !important;
+}
+.menubar.open .toggle_icon{
+  display: none;
+}
+.menubar.open .crossicon{
+    display: block !important;
+}
+.menubar.open{
+    max-width:150px;
+}
+.menubar.open ul{
+    border-radius:20px;
+}
+.menubar.open ul li a span {
+    opacity:1;
+}
+.menubar ul li a i {
+    width: 18px;
+    flex: 0 0 auto;
+    text-align: center;
+}
+.menutoggle i {
+    border: 1px solid var(--borderlight);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: auto;
+    text-align: center;
+}
+.menubar ul li.active a{
+    color: var(--themecolor);
+}
+.stepTooltip {
+    position: fixed;
+    transition: .3s;
+    font-size: 12px;
+    background: #1a1919;
+    right: 100%;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 5px;
+    width: fit-content;
+    z-index: 999;
+}
+/*===========|| fixed menu css End || ==========*/
+/*===========|| Inner container css start || ==========*/
+.inner_container{
+    max-width: 700px;
+}
+    /*===========|| Welcome section css start || ==========*/
+    .welcome_counter {
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .counterbox {
+        max-width: 145px;
+    }
+    .counterbox h2 {
+        font-size: var(--fs_50);
+        color: var(--themecolor);
+        line-height: 100%;
+        margin-bottom: 30px;
+    }
+    .counterbox p {
+        text-transform: uppercase;
+        color: var(--lighttext);
+        font-size: var(--fs_14);
+    }
+    /*===========|| Welcome section css End || ==========*/
+/*===========|| Education section css start || ==========*/
+.education_herarcky::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--lighttext);
+}
+.education_herarcky {
+    position: relative;
+    padding-left: 60px;
+}
+.education_herarcky::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 5.5px;
+    width: 1px;
+    height: 108%;
+    border-radius: 50%;
+    background: #3e3e3e;
+}
+.education_herarcky h6.timeline {
+    color: var(--lighttext);
+    margin-bottom: 20px;
+}
+.aboutEducation {
+    padding-bottom: 50px;
+}
+.education_herarcky:hover::after{
+    background: var(--themecolor);
+}
+.education_herarcky:hover h6.timeline{
+    color: var(--themecolor);
+}
+.aboutEducation>p {
+    color: var(--lighttext);
+    margin-bottom: 8px;
+}
+.education_herarcky:last-child .aboutEducation{
+    padding-bottom:0;
+}
+/*===========|| Education section css End || ==========*/
+/*===========|| Service section css End || ==========*/
+.skill_jobs h3{
+    font-size: var(--fs_24);
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+.speciliztionBox {
+    border: 1px solid var(--borderlight);
+    border-radius: 20px;
+    transition: .3s;
+    position: relative;
+    padding: 44px 48px 41px 48px;
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+}
+.skill_jobs i {
+    font-size: 25px;
+    color: var(--themecolor);
+}
+.myproject{
+    color: var(--themecolor);
+    text-transform: uppercase;
+    font-size:var(--fs_14);
+    text-decoration: none;
+}
+.speciliztionBox:hover {
+    background: var(--dark_black);
+    border: 1px solid var(--themecolor);
+}
+/*===========|| Service section css End || ==========*/
+/*===========|| Skill section css start || ==========*/
+.skillCard {
+    border: 1px solid var(--borderlight);
+    text-align: center;
+    width: fit-content;
+    padding: 30px 50px;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+}
+.skillCard img {
+    max-width: 50px;
+    transition-duration: 0.3s;
+}
+h6.skill_name {
+    margin: 20px 0 0;
+    text-align: center;
+    max-width: 142px;
+    font-size: var(--fs_14);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.mySkillGrid {
+    row-gap: 40px;
+}
+.skillCard:hover{
+    background-color: var(--dark_black);
+    border-color: var(--themecolor);
+}
+.skillCard:hover img{
+    transform: scale(1.2);
+}
+/*===========|| Skill section css End || ==========*/
+/*===========|| Project section css start || ==========*/
+.project_card{
+    height: 300px;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    background-repeat: no-repeat;
+    transition-duration: 4s;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 8px 1px var(--box_shadow);
+}
+.project_card:hover{
+    background-position: bottom;
+}
+.category {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.category>a {
+    font-size: 14px;
+    background: var(--themecolor);
+    padding: 7px 20px;
+    border-radius: 19px;
+    transition: .3s;
+    color: #fff !important;
+}
+.project_card:hover .category>a{
+    background: #2a2a2a;
+}
+/*===========|| Project Section css End || ==========*/
+/*===========|| Mobile Header  css Start || ==========*/
+.profile_imag {
+    width: 40px;
+    height: 40px;
+}
+.profile_imag img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.mobileHeader {
+    background-color: var(--dark_black);
+}
+/*===========|| Mobile Header  css End || ==========*/
+/*===========|| Modal  css Start || ==========*/
+.hireMe_modal .modal-content {
+    background-color: var(--dark_black);
+}
+.hireMe_modal button.btn-close {
+    filter: brightness(5) invert(1) contrast(1);
+}
+.List_option li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+.List_option li a {
+    text-decoration: none;
+    color: var(--themecolor);
+}
+.two_appositeBtn {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+/*===========|| Modal  css End || ==========*/
+/*===========|| Inner container css End || ==========*/
+/*===========|| responsive Css start || ==========*/
+@media(max-width:1250px) and (min-width:1149px){
+.inner_container {
+    max-width: 600px;
+}
+}
+@media(min-width:1151px){
+    .crossiconProfile,.mobileHeader{
+        display: none;
+    }
+
+}
+@media(max-width:1150px){
+    .profileImag img {
+        max-width: 300px;
+    }
+    .mobileHeader{
+        display: flex;
+        z-index: 999;
+        position: sticky;
+        top: 0;
+    }
+    .crossiconProfile {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    .crossiconProfile i{
+        font-size: 26px;
+        font-weight: 300;
+    }
+    .proSideBar{
+        background: var(--black);
+        transform: translate(-50%,-150%);
+        top: 0;
+        left: 50%;
+        border-radius: 0;
+         max-width: 100%;
+         height: 100%;
+        transition-duration:0.5s;
+        z-index: 999;
+    }
+    .allcontent {
+        max-width: 960px;
+        margin-left: auto;
+        padding: 0 15px;
+        margin-right: auto;
+    }
+    
+    .proSideBar.showProfilePopup {
+        transform: translate(-50%,0);
+        
+    }
+    div#modeChangeBtn {
+        display: none;
+    }
+    .hiremeBtn {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+@media(max-width:991px){
+    .menubar {
+        right: 15px;
+    }
+    .inner_container {
+        max-width: calc(100% - 100px);
+    }
+}
+@media(max-width:767px){
+    :root{
+        --fs_50:35px;
+        --fs_24:20px;
+        --fs_20:18px;
+        --fs_14:14px;
+        --fs_12:12px;
+    }
+    .commonHeading {
+        font-size: 35px;
+        line-height: 40px;
+        
+    }
+    .changeMode>i{
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .sectgapping{
+        padding-top:40px;
+        padding-bottom:40px;
+    }
+    .menubar ul>li {
+        width: calc(100% / 6);
+        text-align: center;
+        padding: 20px;
+        border-right: 1px solid var(--borderlight);
+        background: var(--dark_black);
+    }
+    .menubar ul>li:last-child{
+        border-right: 0;
+    }
+    .menubar ul>li>a {
+        justify-content: center;
+    }
+    .menubar ul {
+        padding: 0;
+        border-radius: 0;
+        flex-direction: row !important;
+    }
+    .menubar ul li a span {
+        display: none;
+    }
+    h3.menutoggle {
+        display: none;
+    }
+    .menubar {
+        max-width: 100%;
+        top: unset;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+        right: 0;
+    }
+    .inner_container {
+        max-width: 100%;
+    }
+    .skillCard,h6.skill_name{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hiremeBtn a, .two_appositeBtn .downloadBtn {
+        padding: 6px 24px 6px 24px;
+    }
+    .two_appositeBtn .hiremeBtn {
+        padding: 6px 20px 6px 20px;
+    }
+    .speciliztionBox {
+        padding: 28px;
+    }
+    .project_sec{
+        margin-bottom:40px;
+    }
+}
+@media(max-width:575px){
+    .counterbox p {
+        max-width: 180px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }.counterbox {
+        max-width: 100%;
+        text-align: center;
+        width: 100%;
+    }
+    .welcome_counter {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+
+}
+/*===========|| responsive Css End || ==========*/
+
